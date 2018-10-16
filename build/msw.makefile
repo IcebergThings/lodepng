@@ -7,8 +7,9 @@
 TARGET = lodepng.dll
 SOURCES = lodepng.cpp
 
-include ../../inc.makefile
-include ../../routine.makefile
+MAKE76_ROOT?=`pwd`
+include $(MAKE76_ROOT)/inc.makefile
+include $(MAKE76_ROOT)/routine.makefile
 
 LDLIBS += -L../ASM76 -lASM76 $(shell type build\windows_libs.txt)
 LDFLAGS += -shared -Wl,--export-all-symbols

@@ -7,8 +7,9 @@
 TARGET = liblodepng.dylib
 SOURCES = lodepng.cpp
 
-include ../../inc.makefile
-include ../../routine.makefile
+MAKE76_ROOT?=`pwd`
+include $(MAKE76_ROOT)/inc.makefile
+include $(MAKE76_ROOT)/routine.makefile
 
 LDLIBS += /usr/local/lib/libSOIL.a \
 	$(shell pkg-config --libs glfw3 glm glew portaudio-2.0 ogg vorbisfile)
